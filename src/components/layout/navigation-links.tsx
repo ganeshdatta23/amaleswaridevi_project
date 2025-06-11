@@ -16,14 +16,12 @@ export const navLinksData = [
   { href: '/trust', label: 'Trust', labelTe: 'ట్రస్ట్' },
   { href: '/suggestions', label: 'AI Suggestions', labelTe: 'AI సూచనలు' },
   { href: '/social', label: 'Connect', labelTe: 'సోషల్ మీడియా' },
-  { href: '/donate', label: 'Donate', labelTe: 'విరాళాలు', isFuture: true }, // Mark as future
-  // { href: '/store', label: 'Store', labelTe: 'స్టోర్', isFuture: true }, // Future
-  // { href: '/admin', label: 'Admin', labelTe: 'అడ్మిన్', isFuture: true }, // Future
+  { href: '/donate', label: 'Donate', labelTe: 'విరాళాలు', isFuture: true },
 ];
 
 interface NavigationLinksProps {
   orientation?: 'horizontal' | 'vertical';
-  onLinkClick?: () => void; // For closing mobile menu
+  onLinkClick?: () => void; 
 }
 
 export default function NavigationLinks({ orientation = 'horizontal', onLinkClick }: NavigationLinksProps) {
@@ -41,16 +39,18 @@ export default function NavigationLinks({ orientation = 'horizontal', onLinkClic
           variant="ghost"
           asChild
           className={cn(
-            "transition-colors hover:text-primary focus-visible:text-primary focus-visible:bg-accent/50 text-sm font-medium",
-            pathname === link.href ? "text-primary bg-accent/30" : "text-foreground/70",
+            "transition-colors text-sm font-medium",
+            // For Navbar (dark background): text is Gold (navbar-foreground), active is Maroon text on Gold background
+            "text-navbar-foreground/80 hover:text-navbar-foreground hover:bg-navbar-foreground/10 focus-visible:text-navbar-foreground focus-visible:bg-navbar-foreground/20",
+            pathname === link.href ? "bg-accent/80 text-accent-foreground" : "", // Active: Gold bg, Maroon text
             orientation === 'vertical' && "w-full justify-start text-base py-3 px-4",
-            link.isFuture && "opacity-60 cursor-not-allowed" // Style for future links
+            link.isFuture && "opacity-60 cursor-not-allowed"
           )}
           onClick={() => {
-            if (link.isFuture) return; // Prevent navigation for future links
+            if (link.isFuture) return; 
             if (onLinkClick) onLinkClick();
           }}
-          disabled={link.isFuture} // Disable future links
+          disabled={link.isFuture}
         >
           <Link
             href={link.isFuture ? '#' : link.href}

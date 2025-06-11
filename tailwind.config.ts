@@ -17,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['Alegreya', 'serif'],
-        headline: ['Alegreya', 'serif'],
+        body: ['Poppins', 'Alegreya', 'serif'],
+        headline: ['Playfair Display', 'Alegreya', 'serif'],
         code: ['monospace'],
       },
       colors: {
@@ -53,7 +53,7 @@ export default {
           foreground: 'hsl(var(--destructive-foreground))',
         },
         border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
+        input: 'hsl(var(--input))', // This refers to the input component's background in ShadCN vars
         ring: 'hsl(var(--ring))',
         chart: {
           '1': 'hsl(var(--chart-1))',
@@ -72,6 +72,11 @@ export default {
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))',
         },
+        // Custom colors for direct use if needed
+        'navbar-background': 'hsl(var(--navbar-background))',
+        'navbar-foreground': 'hsl(var(--navbar-foreground))',
+        'footer-background': 'hsl(var(--footer-background))',
+        'footer-foreground': 'hsl(var(--footer-foreground))',
       },
       borderRadius: {
         lg: 'var(--radius)',
