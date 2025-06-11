@@ -19,9 +19,9 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative h-[60vh] md:h-[70vh] flex items-center justify-center text-center animate-fade-in">
         <Image
-          src="https://placehold.co/1920x1080.png"
+          src="https://storage.googleapis.com/gemini-prod-us-west1-001/uploads/2024/07/23/aa9f856c27336d0690ef34895e7b860d.jpeg"
           alt={t(`${templeInfo.nameEn} majestic view`, `${templeInfo.nameTe} యొక్క సుందర దృశ్యం`)}
-          data-ai-hint="temple exterior"
+          data-ai-hint="goddess durga"
           layout="fill"
           objectFit="cover"
           quality={80}
