@@ -116,8 +116,8 @@ export const templeInfo = {
   contact: {
     addressEn: "Davojipalem Village, Pedana, Andhra Pradesh 521366",
     addressTe: "దావోజీపాలెం గ్రామము, పెడన, ఆంధ్ర ప్రదేశ్ 521366",
-    phone: "+91 12345 67890", // Placeholder, user to provide actual
-    email: "info@srivijayaamaleswaridevi.org", // Placeholder email
+    phone: "+91 9951691474",
+    email: "amaleswaridevifamilytrust@gmail.com",
   }
 };
 
@@ -156,3 +156,4 @@ export const donationInfo = {
   qrNoteEn: "A QR code for UPI payment is available on the event flyer/pamphlet for easy scan and pay. Alternatively, you can use the UPI ID provided above.",
   qrNoteTe: "సులభంగా స్కాన్ చేసి చెల్లించడానికి ఈవెంట్ ఫ్లైయర్/పాంప్లెట్‌లో UPI చెల్లింపు కోసం QR కోడ్ అందుబాటులో ఉంది. ప్రత్యామ్నాయంగా, మీరు పైన అందించిన UPI IDని ఉపయోగించవచ్చు."
 };
+
