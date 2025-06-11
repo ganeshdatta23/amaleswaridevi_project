@@ -114,8 +114,8 @@ export const templeInfo = {
   timingsEn: "Morning: 6:00 AM - 12:00 PM\nEvening: 4:00 PM - 8:00 PM\nSpecial puja timings may vary.",
   timingsTe: "ఉదయం: 6:00 AM - 12:00 PM\nసాయంత్రం: 4:00 PM - 8:00 PM\nప్రత్యేక పూజ సమయాలు మారవచ్చు.",
   contact: {
-    addressEn: "Sri Vijaya Amaleswari Devi Temple, Kompally, Hyderabad, Telangana", // Updated address
-    addressTe: "శ్రీ విజయ అమలేశ్వరి దేవి ఆలయం, కొంపల్లి, హైదరాబాద్, తెలంగాణ", // Updated address
+    addressEn: "Davojipalem Village, Pedana, Andhra Pradesh 521366",
+    addressTe: "దావోజీపాలెం గ్రామము, పెడన, ఆంధ్ర ప్రదేశ్ 521366",
     phone: "+91 12345 67890", // Placeholder, user to provide actual
     email: "info@srivijayaamaleswaridevi.org", // Placeholder email
   }
