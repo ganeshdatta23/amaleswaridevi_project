@@ -21,7 +21,7 @@ export default function HomePage() {
         <Image
           src="https://storage.googleapis.com/gemini-prod-us-west1-001/uploads/2024/07/23/aa9f856c27336d0690ef34895e7b860d.jpeg"
           alt={t(`${templeInfo.nameEn} majestic view`, `${templeInfo.nameTe} యొక్క సుందర దృశ్యం`)}
-          data-ai-hint="goddess durga"
+          data-ai-hint="jpg image"
           layout="fill"
           objectFit="cover"
           quality={80}
