@@ -1,7 +1,8 @@
+
 'use client';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import type { GalleryItem } from '@/lib/types';
 import { useLanguage } from '@/contexts/language-context';
 import { Expand } from 'lucide-react';
@@ -32,6 +33,7 @@ export default function ImageCard({ item }: ImageCardProps) {
         </Card>
       </DialogTrigger>
       <DialogContent className="max-w-3xl p-0">
+        <DialogTitle className="sr-only">{altText}</DialogTitle>
         <Image
           src={item.src}
           alt={altText}
