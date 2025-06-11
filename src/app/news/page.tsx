@@ -1,9 +1,10 @@
+
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { newsItems } from '@/lib/data';
+import { newsItems, templeInfo } from '@/lib/data';
 import type { NewsItem } from '@/lib/types';
 import { useLanguage } from '@/contexts/language-context';
 import { Newspaper, ArrowRight } from 'lucide-react';
@@ -18,7 +19,8 @@ export default function NewsPage() {
           {t('Temple News & Announcements', 'ఆలయ వార్తలు & ప్రకటనలు')}
         </h1>
         <p className="mt-4 text-lg text-muted-foreground">
-          {t('Stay updated with the latest happenings, announcements, and spiritual insights from Amaleswari Temple.', 'అమలేశ్వరి ఆలయం నుండి తాజా సంఘటనలు, ప్రకటనలు మరియు ఆధ్యాత్మిక అంతర్దృష్టులతో నవీకరించబడండి.')}
+          {t(`Stay updated with the latest happenings, announcements, and spiritual insights from ${templeInfo.nameEn}.`, 
+             `${templeInfo.nameTe} నుండి తాజా సంఘటనలు, ప్రకటనలు మరియు ఆధ్యాత్మిక అంతర్దృష్టులతో నవీకరించబడండి.`)}
         </p>
       </header>
 
@@ -51,7 +53,9 @@ export default function NewsPage() {
               </CardContent>
               <CardFooter>
                 <Button variant="link" asChild className="text-primary hover:text-accent px-0">
-                  <Link href={`/news/${news.id}`}>{t('Read More', 'మరింత చదవండి')} <ArrowRight className="ml-1 h-4 w-4" /></Link>
+                  {/* Placeholder link, individual news pages are not implemented in this step */}
+                  <span className="cursor-not-allowed">{t('Read More', 'మరింత చదవండి')} <ArrowRight className="ml-1 h-4 w-4" /></span>
+                  {/* <Link href={`/news/${news.id}`}>{t('Read More', 'మరింత చదవండి')} <ArrowRight className="ml-1 h-4 w-4" /></Link> */}
                 </Button>
               </CardFooter>
             </Card>
@@ -66,8 +70,3 @@ export default function NewsPage() {
     </div>
   );
 }
-
-// Placeholder for individual news article page (e.g., /news/[id]/page.tsx)
-// This would typically fetch data based on the ID.
-// For now, this page will just demonstrate structure.
-// You would create a file src/app/news/[id]/page.tsx for this.

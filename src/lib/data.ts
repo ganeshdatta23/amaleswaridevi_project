@@ -1,4 +1,5 @@
-import type { EventItem, GalleryItem, NewsItem } from './types';
+
+import type { EventItem, GalleryItem, NewsItem, PujaItem, TrustMember } from './types';
 
 export const newsItems: NewsItem[] = [
   {
@@ -6,8 +7,8 @@ export const newsItems: NewsItem[] = [
     titleEn: 'Temple Reopens with New Timings',
     titleTe: 'కొత్త సమయాలతో ఆలయం పునఃప్రారంభం',
     date: '2024-07-15',
-    summaryEn: 'Amaleswari Temple is pleased to announce new darshan timings effective from August 1st.',
-    summaryTe: 'ఆగస్టు 1 నుండి అమలేశ్వరి ఆలయం కొత్త దర్శన సమయాలను ప్రకటించింది.',
+    summaryEn: 'Sri Vijaya Amaleswari Devi Temple is pleased to announce new darshan timings effective from August 1st.',
+    summaryTe: 'ఆగస్టు 1 నుండి శ్రీ విజయ అమలేశ్వరి దేవి ఆలయం కొత్త దర్శన సమయాలను ప్రకటించింది.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'temple entrance',
   },
@@ -25,26 +26,48 @@ export const newsItems: NewsItem[] = [
 
 export const eventItems: EventItem[] = [
   {
+    id: 'evt_friday_bhajans',
+    titleEn: 'Weekly Friday Ammavari Bhajans',
+    titleTe: 'వారపు శుక్రవారం అమ్మవారి భజనలు',
+    date: 'Every Friday',
+    time: 'Evening (Confirm timings)',
+    descriptionEn: 'Join us every Friday for soulful Ammavari Bhajans and devotional singing.',
+    descriptionTe: 'ప్రతి శుక్రవారం సాయంత్రం అమ్మవారి భజనలు మరియు భక్తి గానాలలో పాల్గొనండి.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'bhajans devotional singing',
+  },
+  {
+    id: 'evt_dasara',
+    titleEn: 'Annual Dasara Navaratri Utsavalu',
+    titleTe: 'వార్షిక దసరా నవరాత్రి ఉత్సవాలు',
+    date: 'Yearly (As per Almanac)',
+    time: '9 Days Program',
+    descriptionEn: 'Grand 9-day Dasara celebrations with special pujas, alankarams, and cultural events.',
+    descriptionTe: 'ప్రత్యేక పూజలు, అలంకారాలు మరియు సాంస్కృతిక కార్యక్రమాలతో 9 రోజుల దసరా ఉత్సవాలు.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'dasara festival navaratri',
+  },
+  {
+    id: 'evt_sambaralu',
+    titleEn: 'Sambaralu (Once in 11 Years)',
+    titleTe: 'సంబరాలు (11 సంవత్సరాలకు ఒకసారి)',
+    date: 'Once every 11 Years',
+    time: '11 Days Event',
+    descriptionEn: 'A grand 11-day mega event, Sambaralu, celebrated with unique rituals and festivities once every eleven years.',
+    descriptionTe: 'ప్రతి పదకొండు సంవత్సరాలకు ఒకసారి ప్రత్యేక ఆచారాలు మరియు ఉత్సవాలతో జరుపుకునే 11 రోజుల మెగా ఈవెంట్ సంబరాలు.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'temple grand event',
+  },
+  {
     id: 'evt1',
     titleEn: 'Annual Brahmotsavam',
     titleTe: 'వార్షిక బ్రహ్మోత్సవాలు',
-    date: '2024-09-10',
+    date: '2024-09-10 (Example Date)',
     time: '6:00 AM - 9:00 PM',
     descriptionEn: 'The grand annual Brahmotsavam celebrations, featuring various rituals and processions.',
     descriptionTe: 'వివిధ ఆచారాలు మరియు ఊరేగింపులతో కూడిన గొప్ప వార్షిక బ్రహ్మోత్సవ వేడుకలు.',
     imageUrl: 'https://placehold.co/600x400.png',
     imageHint: 'temple festival',
-  },
-  {
-    id: 'evt2',
-    titleEn: 'Sri Krishna Janmashtami',
-    titleTe: 'శ్రీ కృష్ణ జన్మాష్టమి',
-    date: '2024-08-26',
-    time: '5:00 PM onwards',
-    descriptionEn: 'Celebrate the birth of Lord Krishna with special bhajans, pujas, and cultural programs.',
-    descriptionTe: 'శ్రీ కృష్ణుని జన్మదినోత్సవాన్ని ప్రత్యేక భజనలు, పూజలు మరియు సాంస్కృతిక కార్యక్రమాలతో జరుపుకోండి.',
-    imageUrl: 'https://placehold.co/600x400.png',
-    imageHint: 'krishna celebration',
   },
 ];
 
@@ -61,17 +84,19 @@ export const galleryVideos: GalleryItem[] = [
 ];
 
 export const templeInfo = {
-  historyEn: "Amaleswari Temple, nestled in a serene environment, has a rich history dating back centuries. It stands as a beacon of spiritual solace and cultural heritage, attracting devotees from far and wide. The temple architecture is a marvel, reflecting traditional craftsmanship and devotion.",
-  historyTe: "ప్రశాంతమైన వాతావరణంలో నెలకొన్న అమలేశ్వరి ఆలయం శతాబ్దాల నాటి గొప్ప చరిత్రను కలిగి ఉంది. ఇది ఆధ్యాత్మిక సాంత్వన మరియు సాంస్కృతిక వారసత్వానికి ప్రతీకగా నిలుస్తుంది, సుదూర ప్రాంతాల నుండి భక్తులను ఆకర్షిస్తుంది. ఆలయ నిర్మాణం ఒక అద్భుతం, ఇది సాంప్రదాయ హస్తకళ మరియు భక్తిని ప్రతిబింబిస్తుంది.",
+  nameEn: "Sri Vijaya Amaleswari Devi Temple",
+  nameTe: "శ్రీ విజయ అమలేశ్వరి దేవి ఆలయం",
+  historyEn: "Sri Vijaya Amaleswari Devi Temple, nestled in a serene environment, has a rich history dating back centuries. It stands as a beacon of spiritual solace and cultural heritage, attracting devotees from far and wide. The temple architecture is a marvel, reflecting traditional craftsmanship and devotion.",
+  historyTe: "ప్రశాంతమైన వాతావరణంలో నెలకొన్న శ్రీ విజయ అమలేశ్వరి దేవి ఆలయం శతాబ్దాల నాటి గొప్ప చరిత్రను కలిగి ఉంది. ఇది ఆధ్యాత్మిక సాంత్వన మరియు సాంస్కృతిక వారసత్వానికి ప్రతీకగా నిలుస్తుంది, సుదూర ప్రాంతాల నుండి భక్తులను ఆకర్షిస్తుంది. ఆలయ నిర్మాణం ఒక అద్భుతం, ఇది సాంప్రదాయ హస్తకళ మరియు భక్తిని ప్రతిబింబిస్తుంది.",
   missionEn: "Our mission is to preserve and promote Sanatana Dharma, provide a peaceful place for worship, and engage in charitable activities for the welfare of the community.",
   missionTe: "సనాతన ధర్మాన్ని పరిరక్షించడం మరియు ప్రచారం చేయడం, ఆరాధన కోసం ప్రశాంతమైన స్థలాన్ని అందించడం మరియు సమాజ సంక్షేమం కోసం ధార్మిక కార్యక్రమాలలో పాల్గొనడం మా లక్ష్యం.",
   timingsEn: "Morning: 6:00 AM - 12:00 PM\nEvening: 4:00 PM - 8:00 PM\nSpecial puja timings may vary.",
   timingsTe: "ఉదయం: 6:00 AM - 12:00 PM\nసాయంత్రం: 4:00 PM - 8:00 PM\nప్రత్యేక పూజ సమయాలు మారవచ్చు.",
   contact: {
-    addressEn: "Amaleswari Temple, Temple Street, Serene Town, AP 500001",
-    addressTe: "అమలేశ్వరి ఆలయం, ఆలయ వీధి, ప్రశాంత నగరం, AP 500001",
-    phone: "+91 12345 67890",
-    email: "info@amaleswaritemple.org",
+    addressEn: "Sri Vijaya Amaleswari Devi Temple, Kompally, Hyderabad, Telangana", // Updated address
+    addressTe: "శ్రీ విజయ అమలేశ్వరి దేవి ఆలయం, కొంపల్లి, హైదరాబాద్, తెలంగాణ", // Updated address
+    phone: "+91 12345 67890", // Placeholder, user to provide actual
+    email: "info@srivijayaamaleswaridevi.org", // Placeholder email
   }
 };
 
@@ -80,4 +105,18 @@ export const seasons = [
   { value: 'Summer', labelEn: 'Summer', labelTe: 'వేసవికాలం' },
   { value: 'Autumn', labelEn: 'Autumn', labelTe: 'శరదృతువు' },
   { value: 'Winter', labelEn: 'Winter', labelTe: 'శీతాకాలం' },
+];
+
+export const pujaItems: PujaItem[] = [
+  { id: 'puja1', nameEn: 'Archana', nameTe: 'అర్చన', descriptionEn: 'Offering of flowers and chanting of deity names.', descriptionTe: 'పుష్పాలు మరియు దేవతా నామాల జపంతో సమర్పణ.', price: '₹51' },
+  { id: 'puja2', nameEn: 'Abhishekam', nameTe: 'అభిషేకం', descriptionEn: 'Ritual bathing of the deity with sacred liquids.', descriptionTe: 'పవిత్ర ద్రవాలతో దేవతామూర్తికి ఆచార స్నానం.', price: '₹251' },
+  { id: 'puja3', nameEn: 'Kumkumarchana', nameTe: 'కుంకుమార్చన', descriptionEn: 'Archana performed with Kumkum.', descriptionTe: 'కుంకుమతో చేసే అర్చన.', price: '₹101' },
+  { id: 'puja4', nameEn: 'Homam/Havan', nameTe: 'హోమం/హవనం', descriptionEn: 'Fire ritual for specific deities or purposes.', descriptionTe: 'నిర్దిష్ట దేవతలు లేదా ప్రయోజనాల కోసం అగ్ని ఆచారం.', price: 'Contact for details' },
+];
+
+export const trustMembers: TrustMember[] = [
+  { id: 'tm1', nameEn: 'Sri. Example Name 1', nameTe: 'శ్రీ. ఉదాహరణ పేరు 1', roleEn: 'President', roleTe: 'అధ్యక్షుడు', photoUrl: 'https://placehold.co/150x150.png', imageHint: 'person portrait' },
+  { id: 'tm2', nameEn: 'Smt. Example Name 2', nameTe: 'శ్రీమతి. ఉదాహరణ పేరు 2', roleEn: 'Secretary', roleTe: 'కార్యదర్శి', photoUrl: 'https://placehold.co/150x150.png', imageHint: 'person portrait' },
+  { id: 'tm3', nameEn: 'Sri. Example Name 3', nameTe: 'శ్రీ. ఉదాహరణ పేరు 3', roleEn: 'Treasurer', roleTe: 'కోశాధికారి', photoUrl: 'https://placehold.co/150x150.png', imageHint: 'person portrait' },
+  { id: 'tm4', nameEn: 'Smt. Example Name 4', nameTe: 'శ్రీమతి. ఉదాహరణ పేరు 4', roleEn: 'Member', roleTe: 'సభ్యుడు', photoUrl: 'https://placehold.co/150x150.png', imageHint: 'person portrait' },
 ];

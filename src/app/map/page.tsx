@@ -1,3 +1,4 @@
+
 'use client';
 import { useState, useEffect } from 'react';
 import { APIProvider, Map, Marker } from '@vis.gl/react-google-maps';
@@ -6,9 +7,10 @@ import { templeInfo } from '@/lib/data';
 import { useLanguage } from '@/contexts/language-context';
 import { MapPin, Phone, Mail } from 'lucide-react';
 
-const MAPS_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "YOUR_GOOGLE_MAPS_API_KEY_PLACEHOLDER"; // Replace with your actual key or env var
+const MAPS_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "YOUR_GOOGLE_MAPS_API_KEY_PLACEHOLDER"; 
 
-const templePosition = { lat: 17.3850, lng: 78.4867 }; // Example coordinates (Hyderabad), replace with actual
+// Coordinates for Sri Vijaya Amaleswari Devi Temple, Kompally, Hyderabad
+const templePosition = { lat: 17.539604, lng: 78.497496 }; 
 
 export default function MapPage() {
   const { t } = useLanguage();
@@ -31,6 +33,14 @@ export default function MapPage() {
        <div className="container py-12 md:py-16 text-center">
          <h1 className="text-3xl font-bold text-destructive mb-4">{t('Map Configuration Error', 'మ్యాప్ కాన్ఫిగరేషన్ లోపం')}</h1>
          <p className="text-muted-foreground">{t('Google Maps API key is not configured. Please set the NEXT_PUBLIC_GOOGLE_MAPS_API_KEY environment variable.', 'Google Maps API కీ కాన్ఫిగర్ చేయబడలేదు. దయచేసి NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ఎన్విరాన్మెంట్ వేరియబుల్‌ను సెట్ చేయండి.')}</p>
+          <a 
+            href="https://maps.app.goo.gl/dE3iHaNfLUmBRp1z7?g_st=aw" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="mt-4 inline-block px-6 py-2 text-sm font-medium text-white bg-primary rounded-md hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+          >
+            {t('Open in Google Maps', 'Google Maps లో తెరవండి')}
+          </a>
        </div>
     );
   }
@@ -42,7 +52,7 @@ export default function MapPage() {
           {t('Find Your Way to Us', 'మా వద్దకు మీ మార్గాన్ని కనుగొనండి')}
         </h1>
         <p className="mt-4 text-lg text-muted-foreground">
-          {t('Visit Amaleswari Temple. We are located at:', 'అమలేశ్వరి ఆలయాన్ని సందర్శించండి. మేము ఇక్కడ ఉన్నాము:')}
+          {t('Visit Sri Vijaya Amaleswari Devi Temple. We are located at:', 'శ్రీ విజయ అమలేశ్వరి దేవి ఆలయాన్ని సందర్శించండి. మేము ఇక్కడ ఉన్నాము:')}
         </p>
       </header>
 
@@ -52,13 +62,13 @@ export default function MapPage() {
             <APIProvider apiKey={MAPS_API_KEY}>
               <Map
                 defaultCenter={templePosition}
-                defaultZoom={15}
-                mapId="amaleswari-temple-map"
+                defaultZoom={16} // Slightly more zoomed in
+                mapId="sri-vijaya-amaleswari-devi-map"
                 gestureHandling={'greedy'}
                 disableDefaultUI={false}
                 className="w-full h-full"
               >
-                <Marker position={templePosition} title={t('Amaleswari Temple', 'అమలేశ్వరి ఆలయం')} />
+                <Marker position={templePosition} title={t(templeInfo.nameEn, templeInfo.nameTe)} />
               </Map>
             </APIProvider>
           </Card>
@@ -73,6 +83,14 @@ export default function MapPage() {
             </CardHeader>
             <CardContent className="text-foreground/80">
               <p>{t(templeInfo.contact.addressEn, templeInfo.contact.addressTe)}</p>
+                <a 
+                    href={`https://www.google.com/maps/dir/?api=1&destination=${templePosition.lat},${templePosition.lng}`}
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-block text-sm text-primary hover:text-accent"
+                >
+                    {t('Get Directions on Google Maps', 'Google Maps లో మార్గదర్శకాలు పొందండి')}
+                </a>
             </CardContent>
           </Card>
           <Card className="shadow-lg">

@@ -1,7 +1,8 @@
+
 'use client';
 import ImageCard from '@/components/gallery/image-card';
 import VideoCard from '@/components/gallery/video-card';
-import { galleryImages, galleryVideos } from '@/lib/data';
+import { galleryImages, galleryVideos, templeInfo } from '@/lib/data';
 import type { GalleryItem } from '@/lib/types';
 import { useLanguage } from '@/contexts/language-context';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -17,7 +18,7 @@ export default function GalleryPage() {
           {t('Temple Gallery', 'ఆలయ చిత్రమాలిక')}
         </h1>
         <p className="mt-4 text-lg text-muted-foreground">
-          {t('Explore beautiful moments, divine art, and serene views from Amaleswari Temple.', 'అమలేశ్వరి ఆలయం నుండి అందమైన క్షణాలు, దైవిక కళ మరియు ప్రశాంతమైన దృశ్యాలను అన్వేషించండి.')}
+          {t(`Explore beautiful moments, divine art, and serene views from ${templeInfo.nameEn}.`, `${templeInfo.nameTe} నుండి అందమైన క్షణాలు, దైవిక కళ మరియు ప్రశాంతమైన దృశ్యాలను అన్వేషించండి.`)}
         </p>
       </header>
 

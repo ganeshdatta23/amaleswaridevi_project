@@ -1,3 +1,4 @@
+
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -19,7 +20,7 @@ export default function HomePage() {
       <section className="relative h-[60vh] md:h-[70vh] flex items-center justify-center text-center animate-fade-in">
         <Image
           src="https://placehold.co/1920x1080.png"
-          alt={t('Amaleswari Temple majestic view', 'అమలేశ్వరి ఆలయం యొక్క సుందర దృశ్యం')}
+          alt={t(`${templeInfo.nameEn} majestic view`, `${templeInfo.nameTe} యొక్క సుందర దృశ్యం`)}
           data-ai-hint="temple exterior"
           layout="fill"
           objectFit="cover"
@@ -28,7 +29,7 @@ export default function HomePage() {
         />
         <div className="relative z-10 p-6 bg-background/70 backdrop-blur-sm rounded-lg shadow-xl max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-primary">
-            {t('Welcome to Amaleswari Temple', 'అమలేశ్వరి ఆలయానికి స్వాగతం')}
+            {t(`Welcome to ${templeInfo.nameEn}`, `${templeInfo.nameTe} స్వాగతం`)}
           </h1>
           <p className="mt-4 text-lg md:text-xl text-foreground/90 max-w-2xl mx-auto">
             {t('A divine abode of peace, spirituality, and cultural heritage. Discover ancient traditions and find solace.', 'శాంతి, ఆధ్యాత్మికత మరియు సాంస్కృతిక వారసత్వానికి దివ్య నిలయం. ప్రాచీన సంప్రదాయాలను కనుగొనండి మరియు సాంత్వన పొందండి.')}
@@ -45,7 +46,7 @@ export default function HomePage() {
       <section className="container animate-fade-in" style={{ animationDelay: '0.2s' }}>
         <Card className="shadow-lg">
           <CardHeader>
-            <CardTitle className="text-3xl font-headline text-primary">{t('About Our Temple', 'మా ఆలయం గురించి')}</CardTitle>
+            <CardTitle className="text-3xl font-headline text-primary">{t(`About ${templeInfo.nameEn}`, `మా ${templeInfo.nameTe} గురించి`)}</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-lg leading-relaxed text-foreground/80">
@@ -69,10 +70,10 @@ export default function HomePage() {
       {/* Upcoming Events Section */}
       <section className="container animate-fade-in" style={{ animationDelay: '0.6s' }}>
         <h2 className="text-3xl font-headline font-semibold text-center mb-8 text-accent">
-          {t('Upcoming Events & Pujas', 'రాబోయే కార్యక్రమాలు & పూజలు')}
+          {t('Upcoming & Regular Events', 'రాబోయే & సాధారణ కార్యక్రమాలు')}
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {eventItems.slice(0, 3).map((event: EventItem) => (
+          {eventItems.filter(event => !event.id.startsWith("past_")).slice(0, 3).map((event: EventItem) => (
             <Card key={event.id} className="overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
               {event.imageUrl && (
                 <div className="relative h-48 w-full">

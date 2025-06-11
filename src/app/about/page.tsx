@@ -1,3 +1,4 @@
+
 'use client';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -12,7 +13,7 @@ export default function AboutPage() {
     <div className="container py-12 md:py-16 animate-fade-in">
       <header className="mb-12 text-center">
         <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">
-          {t('About Amaleswari Temple', 'అమలేశ్వరి ఆలయం గురించి')}
+          {t(`About ${templeInfo.nameEn}`, `గురించి ${templeInfo.nameTe}`)}
         </h1>
         <p className="mt-4 text-lg text-muted-foreground">
           {t('Discover the rich heritage and spiritual significance of our sacred temple.', 'మా పవిత్ర ఆలయం యొక్క గొప్ప వారసత్వం మరియు ఆధ్యాత్మిక ప్రాముఖ్యతను కనుగొనండి.')}
@@ -23,7 +24,7 @@ export default function AboutPage() {
         <div>
           <Image
             src="https://placehold.co/800x600.png"
-            alt={t('Amaleswari Temple Sanctum', 'అమలేశ్వరి ఆలయ గర్భగుడి')}
+            alt={t(`${templeInfo.nameEn} Sanctum`, `${templeInfo.nameTe} గర్భగుడి`)}
             data-ai-hint="temple interior"
             width={800}
             height={600}

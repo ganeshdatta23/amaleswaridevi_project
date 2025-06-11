@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
@@ -5,8 +6,8 @@ import { LanguageProvider } from '@/contexts/language-context';
 import MainLayout from '@/components/layout/main-layout';
 
 export const metadata: Metadata = {
-  title: 'Amaleswari Temple Hub',
-  description: 'Official website of Amaleswari Temple, offering information, events, gallery, and more.',
+  title: 'Sri Vijaya Amaleswari Devi',
+  description: 'Official website of Sri Vijaya Amaleswari Devi, offering information, events, gallery, and more.',
   icons: {
     icon: '/favicon.ico', // Assuming a favicon might be added later
   },

@@ -1,3 +1,4 @@
+
 export interface NewsItem {
   id: string;
   titleEn: string;
@@ -30,4 +31,25 @@ export interface GalleryItem {
   titleEn?: string; // For videos
   titleTe?: string; // For videos
   hint?: string;
+}
+
+export interface PujaItem {
+  id: string;
+  nameEn: string;
+  nameTe: string;
+  descriptionEn: string;
+  descriptionTe: string;
+  price?: string; // Optional price
+  imageUrl?: string;
+  imageHint?: string;
+}
+
+export interface TrustMember {
+  id: string;
+  nameEn: string;
+  nameTe: string;
+  roleEn: string;
+  roleTe: string;
+  photoUrl?: string;
+  imageHint?: string;
 }

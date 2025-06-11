@@ -1,3 +1,4 @@
+
 'use client';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -44,7 +45,7 @@ export default function ContactPage() {
           {t('Contact Us', 'మమ్మల్ని సంప్రదించండి')}
         </h1>
         <p className="mt-4 text-lg text-muted-foreground">
-          {t('We are here to assist you. Reach out with any queries or for more information.', 'మేము మీకు సహాయం చేయడానికి ఇక్కడ ఉన్నాము. ఏవైనా ప్రశ్నలతో లేదా మరింత సమాచారం కోసం సంప్రదించండి.')}
+          {t('We are here to assist you. Reach out with any queries or for more information about Sri Vijaya Amaleswari Devi Temple.', 'మేము మీకు సహాయం చేయడానికి ఇక్కడ ఉన్నాము. శ్రీ విజయ అమలేశ్వరి దేవి ఆలయం గురించి ఏవైనా ప్రశ్నలతో లేదా మరింత సమాచారం కోసం సంప్రదించండి.')}
         </p>
       </header>
 
@@ -104,7 +105,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <Label htmlFor="subject">{t('Subject', 'విషయం')}</Label>
-                  <Input id="subject" {...form.register("subject")} placeholder={t('Regarding...', 'గురించి...')} />
+                  <Input id="subject" {...form.register("subject")} placeholder={t('Regarding Sri Vijaya Amaleswari Devi Temple...', 'శ్రీ విజయ అమలేశ్వరి దేవి ఆలయం గురించి...')} />
                   {form.formState.errors.subject && <p className="text-sm text-destructive mt-1">{form.formState.errors.subject.message}</p>}
                 </div>
                 <div>
