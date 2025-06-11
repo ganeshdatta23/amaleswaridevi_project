@@ -71,7 +71,7 @@ export default function HomePage() {
       {/* Upcoming Events Section */}
       <section className="container animate-fade-in" style={{ animationDelay: '0.6s' }}>
         <h2 className="text-3xl font-headline font-semibold text-center mb-8 text-accent">
-          {t('Upcoming & Regular Events', 'రాబోయే & సాధారణ కార్యక్రమాలు')}
+          {t('Upcoming & Daily Events', 'రాబోయే & సాధారణ కార్యక్రమాలు')}
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {eventItems.filter(event => !event.id.startsWith("past_")).slice(0, 3).map((event: EventItem) => (
