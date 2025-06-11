@@ -3,6 +3,16 @@ import type { EventItem, GalleryItem, NewsItem, PujaItem, TrustMember } from './
 
 export const newsItems: NewsItem[] = [
   {
+    id: 'annual_celebrations_2025',
+    titleEn: 'Sri Vijaya Amaleswari Devi Annual Celebrations 2025',
+    titleTe: 'శ్రీ విజయ అమలేశ్వరి దేవి వార్షిక వేడుకలు 2025',
+    date: '22-May-2025 to 31-May-2025',
+    summaryEn: 'The annual celebrations of Sri Vijaya Amaleswari Devi will be held from May 22nd to May 31st, 2025. A special Annadanam (free food distribution) will take place on May 27th, 2025, around 1:00 PM. Devotees are requested to contribute generously. Details on the Donate page.',
+    summaryTe: 'శ్రీ విజయ అమలేశ్వరి దేవి వార్షిక వేడుకలు 22-మే-2025 నుండి 31-మే-2025 వరకు జరుగుతాయి. 27-మే-2025న మధ్యాహ్నం 1:00 గంటలకు ప్రత్యేక అన్నదానం జరుగుతుంది. భక్తులు ఉదారంగా విరాళాలు అందించాలని కోరడమైనది. మరిన్ని వివరాలు విరాళాల పేజీలో.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'temple festival celebration',
+  },
+  {
     id: '1',
     titleEn: 'Temple Reopens with New Timings',
     titleTe: 'కొత్త సమయాలతో ఆలయం పునఃప్రారంభం',
@@ -25,6 +35,17 @@ export const newsItems: NewsItem[] = [
 ];
 
 export const eventItems: EventItem[] = [
+  {
+    id: 'evt_annual_celebrations_2025',
+    titleEn: 'Annual Celebrations 2025 & Annadanam',
+    titleTe: 'వార్షిక వేడుకలు 2025 & అన్నదానం',
+    date: '22-May-2025 to 31-May-2025 (Annadanam on 27-May-2025)',
+    time: 'Annadanam around 1:00 PM on May 27th',
+    descriptionEn: 'Grand annual celebrations of Sri Vijaya Amaleswari Devi, featuring special pujas, rituals, and a mass Annadanam (free food distribution) on Tuesday, May 27th, 2025, around 1:00 PM, organized by the Family Trust with community participation. All are invited.',
+    descriptionTe: 'శ్రీ విజయ అమలేశ్వరి దేవి వార్షిక వేడుకలు. ప్రత్యేక పూజలు, ఆచారాలు, మరియు మే 27, 2025, మంగళవారం మధ్యాహ్నం 1:00 గంటలకు కుటుంబ ట్రస్ట్ మరియు సమాజ భాగస్వామ్యంతో భారీ అన్నదానం నిర్వహించబడుతుంది. అందరూ ఆహ్వానితులే.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'annual festival Annadanam',
+  },
   {
     id: 'evt_friday_bhajans',
     titleEn: 'Weekly Friday Ammavari Bhajans',
@@ -120,3 +141,18 @@ export const trustMembers: TrustMember[] = [
   { id: 'tm3', nameEn: 'Sri. Example Name 3', nameTe: 'శ్రీ. ఉదాహరణ పేరు 3', roleEn: 'Treasurer', roleTe: 'కోశాధికారి', photoUrl: 'https://placehold.co/150x150.png', imageHint: 'person portrait' },
   { id: 'tm4', nameEn: 'Smt. Example Name 4', nameTe: 'శ్రీమతి. ఉదాహరణ పేరు 4', roleEn: 'Member', roleTe: 'సభ్యుడు', photoUrl: 'https://placehold.co/150x150.png', imageHint: 'person portrait' },
 ];
+
+export const donationInfo = {
+  accountNameEn: "Sri Vijaya Amaleswari Devi Devasthanam Family Trust",
+  accountNameTe: "శ్రీ విజయ అమలేశ్వరి దేవి దేవస్థానం ఫ్యామిలీ ట్రస్ట్",
+  bankNameEn: "State Bank of India (SBI), Pamulapadu Branch",
+  bankNameTe: "స్టేట్ బ్యాంక్ ఆఫ్ ఇండియా (SBI), పాములపాడు బ్రాంచ్",
+  accountNumber: "62421264147",
+  ifscCode: "SBIN0021823",
+  branchCode: "21823",
+  upiId: "62421264147@sbi",
+  estimatedCostEn: "It is estimated that a minimum of ₹50,000 is required for the Annadanam and other arrangements.",
+  estimatedCostTe: "అన్నదానం మరియు ఇతర ఏర్పాట్లకు కనీసం ₹50,000 అవసరమని అంచనా.",
+  qrNoteEn: "A QR code for UPI payment is available on the event flyer/pamphlet for easy scan and pay. Alternatively, you can use the UPI ID provided above.",
+  qrNoteTe: "సులభంగా స్కాన్ చేసి చెల్లించడానికి ఈవెంట్ ఫ్లైయర్/పాంప్లెట్‌లో UPI చెల్లింపు కోసం QR కోడ్ అందుబాటులో ఉంది. ప్రత్యామ్నాయంగా, మీరు పైన అందించిన UPI IDని ఉపయోగించవచ్చు."
+};
