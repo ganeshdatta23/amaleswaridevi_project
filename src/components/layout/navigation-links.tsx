@@ -52,15 +52,11 @@ export default function NavigationLinks({ orientation = 'horizontal', onLinkClic
           }}
           disabled={link.isFuture} // Disable future links
         >
-          <Link 
-            href={link.isFuture ? '#' : link.href} 
-            legacyBehavior 
-            passHref
+          <Link
+            href={link.isFuture ? '#' : link.href}
           >
-            <a className={link.isFuture ? "pointer-events-none" : ""}>
-              {t(link.label, link.labelTe)}
-              {link.isFuture && <span className="text-xs ml-1">({t('Soon','త్వరలో')})</span>}
-            </a>
+            {t(link.label, link.labelTe)}
+            {link.isFuture && <span className="text-xs ml-1">({t('Soon','త్వరలో')})</span>}
           </Link>
         </Button>
       ))}
