@@ -9,8 +9,8 @@ import { MapPin, Phone, Mail } from 'lucide-react';
 
 const MAPS_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "YOUR_GOOGLE_MAPS_API_KEY_PLACEHOLDER"; 
 
-// Coordinates for Sri Vijaya Amaleswari Devi Temple, Davojipalem Village, Pedana
-const templePosition = { lat: 16.2700, lng: 81.1400 }; 
+// Coordinates for Sri Vijaya Amaleswari Devi Devasthanam, Davoji Palem
+const templePosition = { lat: 16.4305, lng: 81.1513 }; 
 
 export default function MapPage() {
   const { t } = useLanguage();
@@ -34,7 +34,7 @@ export default function MapPage() {
          <h1 className="text-3xl font-bold text-destructive mb-4">{t('Map Configuration Error', 'మ్యాప్ కాన్ఫిగరేషన్ లోపం')}</h1>
          <p className="text-muted-foreground">{t('Google Maps API key is not configured. Please set the NEXT_PUBLIC_GOOGLE_MAPS_API_KEY environment variable.', 'Google Maps API కీ కాన్ఫిగర్ చేయబడలేదు. దయచేసి NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ఎన్విరాన్మెంట్ వేరియబుల్‌ను సెట్ చేయండి.')}</p>
           <a 
-            href={`https://maps.google.com/?q=${encodeURIComponent(t(templeInfo.contact.addressEn, templeInfo.contact.addressTe))}`}
+            href={`https://maps.google.com/?q=${templePosition.lat},${templePosition.lng}`}
             target="_blank" 
             rel="noopener noreferrer"
             className="mt-4 inline-block px-6 py-2 text-sm font-medium text-white bg-primary rounded-md hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
@@ -62,7 +62,7 @@ export default function MapPage() {
             <APIProvider apiKey={MAPS_API_KEY}>
               <Map
                 defaultCenter={templePosition}
-                defaultZoom={15} 
+                defaultZoom={16} 
                 mapId="sri-vijaya-amaleswari-devi-map"
                 gestureHandling={'greedy'}
                 disableDefaultUI={false}
