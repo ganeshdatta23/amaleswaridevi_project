@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import PersonalizedEventsForm from '@/components/ai/personalized-events-form';
 import { newsItems, eventItems, templeInfo } from '@/lib/data';
 import type { NewsItem, EventItem } from '@/lib/types';
 import { useLanguage } from '@/contexts/language-context';
@@ -25,8 +24,8 @@ export default function HomePage() {
           layout="fill"
           objectFit="cover"
           quality={80}
-          priority={true} // Added priority for LCP
-          className="absolute inset-0 z-0" // Removed opacity-40
+          priority={true} 
+          className="absolute inset-0 z-0" 
         />
         <div className="relative z-10 p-6 bg-background/70 backdrop-blur-sm rounded-lg shadow-xl max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-primary">
@@ -60,13 +59,6 @@ export default function HomePage() {
         </Card>
       </section>
       
-      {/* Personalized Event Suggestions Section */}
-      <section className="container animate-fade-in" style={{ animationDelay: '0.4s' }}>
-        <h2 className="text-3xl font-headline font-semibold text-center mb-8 text-accent">
-          {t('Discover Events Tailored for You', 'మీ కోసం రూపొందించిన ఈవెంట్‌లను కనుగొనండి')}
-        </h2>
-        <PersonalizedEventsForm />
-      </section>
 
       {/* Upcoming Events Section */}
       <section className="container animate-fade-in" style={{ animationDelay: '0.6s' }}>

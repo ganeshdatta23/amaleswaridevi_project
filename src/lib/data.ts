@@ -121,13 +121,6 @@ export const templeInfo = {
   }
 };
 
-export const seasons = [
-  { value: 'Spring', labelEn: 'Spring', labelTe: 'వసంతకాలం' },
-  { value: 'Summer', labelEn: 'Summer', labelTe: 'వేసవికాలం' },
-  { value: 'Autumn', labelEn: 'Autumn', labelTe: 'శరదృతువు' },
-  { value: 'Winter', labelEn: 'Winter', labelTe: 'శీతాకాలం' },
-];
-
 export const pujaItems: PujaItem[] = [
   { id: 'puja1', nameEn: 'Archana', nameTe: 'అర్చన', descriptionEn: 'Offering of flowers and chanting of deity names.', descriptionTe: 'పుష్పాలు మరియు దేవతా నామాల జపంతో సమర్పణ.', price: '₹51' },
   { id: 'puja2', nameEn: 'Abhishekam', nameTe: 'అభిషేకం', descriptionEn: 'Ritual bathing of the deity with sacred liquids.', descriptionTe: 'పవిత్ర ద్రవాలతో దేవతామూర్తికి ఆచార స్నానం.', price: '₹251' },
@@ -156,4 +149,3 @@ export const donationInfo = {
   qrNoteEn: "A QR code for UPI payment is available on the event flyer/pamphlet for easy scan and pay. Alternatively, you can use the UPI ID provided above.",
   qrNoteTe: "సులభంగా స్కాన్ చేసి చెల్లించడానికి ఈవెంట్ ఫ్లైయర్/పాంప్లెట్‌లో UPI చెల్లింపు కోసం QR కోడ్ అందుబాటులో ఉంది. ప్రత్యామ్నాయంగా, మీరు పైన అందించిన UPI IDని ఉపయోగించవచ్చు."
 };
-

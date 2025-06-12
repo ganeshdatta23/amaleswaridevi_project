@@ -1,4 +1,7 @@
+
 import { config } from 'dotenv';
 config();
 
-import '@/ai/flows/personalized-event-suggestions.ts';
+// This file is intentionally left almost empty after removing specific flows.
+// It's kept for potential future Genkit flow registrations.
+// Example: import '@/ai/flows/your-new-flow.ts';
