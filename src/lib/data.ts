@@ -100,8 +100,26 @@ export const galleryImages: GalleryItem[] = [
 ];
 
 export const galleryVideos: GalleryItem[] = [
-  { id: 'vid1', type: 'video', src: 'https://www.youtube.com/embed/dQw4w9WgXcQ', titleEn: 'Temple Documentary Short', titleTe: 'ఆలయ డాక్యుమెంటరీ', hint: 'temple video' },
-  { id: 'vid2', type: 'video', src: 'https://www.youtube.com/embed/rokGy0huYEA', titleEn: 'Annual Festival Highlights', titleTe: 'వార్షిక పండుగ ముఖ్యాంశాలు', hint: 'festival highlights' },
+  { id: 'vid_cds7iYrHtI0', type: 'video', src: 'https://www.youtube.com/embed/cds7iYrHtI0', titleEn: 'Temple Video 1', titleTe: 'ఆలయ వీడియో 1', hint: 'temple video' },
+  { id: 'vid_TgjCGtaohe4', type: 'video', src: 'https://www.youtube.com/embed/TgjCGtaohe4', titleEn: 'Temple Video 2', titleTe: 'ఆలయ వీడియో 2', hint: 'temple video' },
+  { id: 'vid_zYdUQ7PhWyg', type: 'video', src: 'https://www.youtube.com/embed/zYdUQ7PhWyg', titleEn: 'Temple Video 3', titleTe: 'ఆలయ వీడియో 3', hint: 'temple video' },
+  { id: 'vid_MNUiRQQ57-0', type: 'video', src: 'https://www.youtube.com/embed/MNUiRQQ57-0', titleEn: 'Temple Video 4', titleTe: 'ఆలయ వీడియో 4', hint: 'temple video' },
+  { id: 'vid_OR7K97KZap4', type: 'video', src: 'https://www.youtube.com/embed/OR7K97KZap4', titleEn: 'Temple Video 5', titleTe: 'ఆలయ వీడియో 5', hint: 'temple video' },
+  { id: 'vid_hK4F--Cw32g', type: 'video', src: 'https://www.youtube.com/embed/hK4F--Cw32g', titleEn: 'Temple Video 6', titleTe: 'ఆలయ వీడియో 6', hint: 'temple video' },
+  { id: 'vid_cS8kV7n1liQ', type: 'video', src: 'https://www.youtube.com/embed/cS8kV7n1liQ', titleEn: 'Temple Video 7', titleTe: 'ఆలయ వీడియో 7', hint: 'temple video' },
+  { id: 'vid_012S1BSiUng', type: 'video', src: 'https://www.youtube.com/embed/012S1BSiUng', titleEn: 'Temple Video 8', titleTe: 'ఆలయ వీడియో 8', hint: 'temple video' },
+  { id: 'vid_PusreDbwK90', type: 'video', src: 'https://www.youtube.com/embed/PusreDbwK90', titleEn: 'Temple Video 9', titleTe: 'ఆలయ వీడియో 9', hint: 'temple video' },
+  { id: 'vid_BZ2dVdAvnr4', type: 'video', src: 'https://www.youtube.com/embed/BZ2dVdAvnr4', titleEn: 'Temple Video 10', titleTe: 'ఆలయ వీడియో 10', hint: 'temple video' },
+  { id: 'vid_li0SSrklIPw', type: 'video', src: 'https://www.youtube.com/embed/li0SSrklIPw', titleEn: 'Temple Video 11', titleTe: 'ఆలయ వీడియో 11', hint: 'temple video' },
+  { id: 'vid_9iPAlVRt9F0', type: 'video', src: 'https://www.youtube.com/embed/9iPAlVRt9F0', titleEn: 'Temple Video 12', titleTe: 'ఆలయ వీడియో 12', hint: 'temple video' },
+  { id: 'vid_MuSDXsEMafQ', type: 'video', src: 'https://www.youtube.com/embed/MuSDXsEMafQ', titleEn: 'Temple Video 13', titleTe: 'ఆలయ వీడియో 13', hint: 'temple video' },
+  { id: 'vid_exYu3NprZi0', type: 'video', src: 'https://www.youtube.com/embed/exYu3NprZi0', titleEn: 'Temple Video 14', titleTe: 'ఆలయ వీడియో 14', hint: 'temple video' },
+  { id: 'vid_hn6lyVw1qyc', type: 'video', src: 'https://www.youtube.com/embed/hn6lyVw1qyc', titleEn: 'Temple Video 15', titleTe: 'ఆలయ వీడియో 15', hint: 'temple video' },
+  { id: 'vid_2rmk4MJ-vSE', type: 'video', src: 'https://www.youtube.com/embed/2rmk4MJ-vSE', titleEn: 'Temple Video 16', titleTe: 'ఆలయ వీడియో 16', hint: 'temple video' },
+  { id: 'vid_DbM-i3bB8D4', type: 'video', src: 'https://www.youtube.com/embed/DbM-i3bB8D4', titleEn: 'Temple Video 17', titleTe: 'ఆలయ వీడియో 17', hint: 'temple video' },
+  { id: 'vid_EX7BU7u0GQQ', type: 'video', src: 'https://www.youtube.com/embed/EX7BU7u0GQQ', titleEn: 'Temple Video 18', titleTe: 'ఆలయ వీడియో 18', hint: 'temple video' },
+  { id: 'vid_fcbGC9uoXqM', type: 'video', src: 'https://www.youtube.com/embed/fcbGC9uoXqM', titleEn: 'Temple Video 19', titleTe: 'ఆలయ వీడియో 19', hint: 'temple video' },
+  { id: 'vid_GdtQZ5qpER8', type: 'video', src: 'https://www.youtube.com/embed/GdtQZ5qpER8', titleEn: 'Temple Video 20', titleTe: 'ఆలయ వీడియో 20', hint: 'temple video' },
 ];
 
 export const templeInfo = {
