@@ -25,12 +25,13 @@ export default function AboutPage() {
       <div className="grid md:grid-cols-2 gap-8 items-start mb-12">
         <div>
           <Image
-            src="https://placehold.co/800x600.png"
-            alt={t(`${templeInfo.nameEn} Sanctum`, `${templeInfo.nameTe} గర్భగుడి`)}
-            data-ai-hint="temple interior"
+            src="https://storage.googleapis.com/gcp-project-us-central1-docs-agent-198925/images/2024-07-24T10-25-54.069Z_image.jpeg"
+            alt={t(`${templeInfo.nameEn} Aerial View`, `${templeInfo.nameTe} ఏరియల్ వ్యూ`)}
+            data-ai-hint="temple aerial"
             width={800}
             height={600}
             className="rounded-lg shadow-xl object-cover"
+            priority
           />
         </div>
         <div className="space-y-6">
