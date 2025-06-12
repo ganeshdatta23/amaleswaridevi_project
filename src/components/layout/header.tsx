@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import NavigationLinks from './navigation-links';
 import LanguageSwitcher from './language-switcher';
 import { ShriYantraIcon } from '@/components/icons/shri-yantra-icon';
@@ -37,7 +37,10 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-navbar-background text-navbar-foreground p-6">
-              <div className="flex flex-col gap-6">
+              <SheetHeader>
+                <SheetTitle className="sr-only">{t('Navigation Menu', 'నావిగేషన్ మెను')}</SheetTitle>
+              </SheetHeader>
+              <div className="flex flex-col gap-6 mt-4"> {/* Added mt-4 to give space if title were visible */}
                 <Link href="/" className="flex items-center gap-2 mb-4">
                   <ShriYantraIcon className="h-8 w-8 text-accent" />
                   <span className="font-headline text-xl font-semibold text-navbar-foreground">
