@@ -1,6 +1,6 @@
 
 'use client';
-import Image from 'next/image';
+// import Image from 'next/image'; // Temporarily replaced with <img> for diagnostics
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { templeInfo } from '@/lib/data';
@@ -10,6 +10,8 @@ import { ScrollText, Target, Clock, MapPin, ExternalLink } from 'lucide-react';
 export default function AboutPage() {
   const { t } = useLanguage();
   const googleMapsLink = "https://g.co/kgs/5wKLsSh";
+  const imageUrl = "https://storage.googleapis.com/gcp-project-us-central1-docs-agent-198925/images/2024-07-24T10-25-54.069Z_image.jpeg";
+  const imageAltText = t(`${templeInfo.nameEn} Aerial View`, `${templeInfo.nameTe} ఏరియల్ వ్యూ`);
 
   return (
     <div className="container py-12 md:py-16 animate-fade-in">
@@ -24,14 +26,14 @@ export default function AboutPage() {
 
       <div className="grid md:grid-cols-2 gap-8 items-start mb-12">
         <div>
-          <Image
-            src="https://storage.googleapis.com/gcp-project-us-central1-docs-agent-198925/images/2024-07-24T10-25-54.069Z_image.jpeg"
-            alt={t(`${templeInfo.nameEn} Aerial View`, `${templeInfo.nameTe} ఏరియల్ వ్యూ`)}
+          <img
+            src={imageUrl}
+            alt={imageAltText}
             data-ai-hint="temple aerial"
             width={800}
             height={600}
-            className="rounded-lg shadow-xl object-cover"
-            priority
+            className="rounded-lg shadow-xl object-cover w-full h-auto max-w-[800px] max-h-[600px]"
+            // priority // priority is a next/image prop
           />
         </div>
         <div className="space-y-6">
