@@ -7,8 +7,15 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { newsItems, eventItems, templeInfo } from '@/lib/data';
 import type { NewsItem, EventItem } from '@/lib/types';
 import { useLanguage } from '@/contexts/language-context';
-import { CalendarDays, Newspaper, ArrowRight } from 'lucide-react';
+import { CalendarDays, Newspaper, ArrowRight, Lightbulb } from 'lucide-react';
 import { EventIcon } from '@/components/icons/event-icon'; // Custom icon
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+
 
 export default function HomePage() {
   const { t } = useLanguage();
@@ -18,9 +25,9 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative h-[60vh] md:h-[70vh] flex items-center justify-center text-center animate-fade-in">
         <Image
-          src="https://placehold.co/1920x1080.png"
+          src="https://storage.googleapis.com/gcp-project-us-central1-docs-agent-198925/images/2024-07-24T07-53-52.920Z_image.jpg"
           alt={t(`${templeInfo.nameEn} majestic view`, `${templeInfo.nameTe} యొక్క సుందర దృశ్యం`)}
-          data-ai-hint="temple exterior"
+          data-ai-hint="goddess statue"
           layout="fill"
           objectFit="cover"
           quality={80}
@@ -59,6 +66,36 @@ export default function HomePage() {
         </Card>
       </section>
 
+      {/* Call to Action / Quick Links Section - Removed AI Suggestions */}
+      <section className="container animate-fade-in" style={{ animationDelay: '0.4s' }}>
+        <Accordion type="single" collapsible className="w-full">
+          <AccordionItem value="item-1">
+            <AccordionTrigger>
+              <div className="flex items-center gap-2 text-xl font-headline text-primary">
+                <Lightbulb className="w-6 h-6 text-primary" /> 
+                {t('Explore & Participate', 'అన్వేషించండి & పాల్గొనండి')}
+              </div>
+            </AccordionTrigger>
+            <AccordionContent>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+                {[
+                  { href: '/donate', labelEn: 'Donate Now', labelTe: 'ఇప్పుడే విరాళం ఇవ్వండి', icon: 'HandCoins' },
+                  { href: '/events', labelEn: 'View Events', labelTe: 'కార్యక్రమాలు చూడండి', icon: 'CalendarDays' },
+                  { href: '/gallery', labelEn: 'Temple Gallery', labelTe: 'ఆలయ చిత్రమాలిక', icon: 'Image' },
+                  { href: '/contact', labelEn: 'Contact Us', labelTe: 'మమ్మల్ని సంప్రదించండి', icon: 'Mail' },
+                ].map((item) => (
+                  <Button key={item.href} asChild variant="outline" className="w-full">
+                    <Link href={item.href}>
+                      {/* Icon placeholder, consider adding actual icons */}
+                      {t(item.labelEn, item.labelTe)}
+                    </Link>
+                  </Button>
+                ))}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </section>
 
       {/* Upcoming Events Section */}
       <section className="container animate-fade-in" style={{ animationDelay: '0.6s' }}>

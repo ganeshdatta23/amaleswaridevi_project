@@ -22,6 +22,12 @@ const nextConfig: NextConfig = {
         hostname: 'storage.googleapis.com',
         port: '',
         pathname: '/gemini-prod-us-west1-001/uploads/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'storage.googleapis.com',
+        port: '',
+        pathname: '/gcp-project-us-central1-docs-agent-198925/images/**',
       }
     ],
   },
