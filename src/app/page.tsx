@@ -18,14 +18,14 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative h-[60vh] md:h-[70vh] flex items-center justify-center text-center animate-fade-in">
         <Image
-          src="https://storage.googleapis.com/gemini-prod-us-west1-001/uploads/2024/07/23/aa9f856c27336d0690ef34895e7b860d.jpeg"
+          src="https://placehold.co/1920x1080.png"
           alt={t(`${templeInfo.nameEn} majestic view`, `${templeInfo.nameTe} యొక్క సుందర దృశ్యం`)}
-          data-ai-hint="goddess mural"
+          data-ai-hint="temple exterior"
           layout="fill"
           objectFit="cover"
           quality={80}
-          priority={true} 
-          className="absolute inset-0 z-0" 
+          priority={true}
+          className="absolute inset-0 z-0"
         />
         <div className="relative z-10 p-6 bg-background/70 backdrop-blur-sm rounded-lg shadow-xl max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-primary">
@@ -58,7 +58,7 @@ export default function HomePage() {
           </CardContent>
         </Card>
       </section>
-      
+
 
       {/* Upcoming Events Section */}
       <section className="container animate-fade-in" style={{ animationDelay: '0.6s' }}>
@@ -145,6 +145,3 @@ export default function HomePage() {
     </div>
   );
 }
-    
-
-    
