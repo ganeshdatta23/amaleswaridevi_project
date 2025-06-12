@@ -40,7 +40,7 @@ export default function HomePage() {
         />
         <div className="relative z-10 p-6 bg-background/70 backdrop-blur-sm rounded-lg shadow-xl max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-primary">
-            {t(`Welcome to ${templeInfo.nameEn}`, `${templeInfo.nameTe} స్వాగతం`)}
+            {t(` ${templeInfo.nameEn}`, `${templeInfo.nameTe} స్వాగతం`)}
           </h1>
           <p className="mt-4 text-lg md:text-xl text-foreground/90 max-w-2xl mx-auto">
             {t('A divine abode of peace, spirituality, and cultural heritage. Discover ancient traditions and find solace.', 'శాంతి, ఆధ్యాత్మికత మరియు సాంస్కృతిక వారసత్వానికి దివ్య నిలయం. ప్రాచీన సంప్రదాయాలను కనుగొనండి మరియు సాంత్వన పొందండి.')}

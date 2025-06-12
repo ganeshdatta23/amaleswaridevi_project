@@ -54,7 +54,7 @@ export const eventItems: EventItem[] = [
     time: 'Evening (Confirm timings)',
     descriptionEn: 'Join us every Friday for soulful Ammavari Bhajans and devotional singing.',
     descriptionTe: 'ప్రతి శుక్రవారం సాయంత్రం అమ్మవారి భజనలు మరియు భక్తి గానాలలో పాల్గొనండి.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://images.unsplash.com/photo-1568219656418-15c329312bf1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxiaGFqYW5zfGVufDB8fHx8MTc0OTY5NTE2NHww&ixlib=rb-4.1.0&q=80&w=1080',
     imageHint: 'bhajans devotional singing',
   },
   {
@@ -149,3 +149,6 @@ export const donationInfo = {
   qrNoteEn: "A QR code for UPI payment is available on the event flyer/pamphlet for easy scan and pay. Alternatively, you can use the UPI ID provided above.",
   qrNoteTe: "సులభంగా స్కాన్ చేసి చెల్లించడానికి ఈవెంట్ ఫ్లైయర్/పాంప్లెట్‌లో UPI చెల్లింపు కోసం QR కోడ్ అందుబాటులో ఉంది. ప్రత్యామ్నాయంగా, మీరు పైన అందించిన UPI IDని ఉపయోగించవచ్చు."
 };
+
+
+    
