@@ -10,8 +10,8 @@ import { ScrollText, Target, Clock, MapPin, ExternalLink } from 'lucide-react';
 export default function AboutPage() {
   const { t } = useLanguage();
   const googleMapsLink = "https://g.co/kgs/5wKLsSh";
-  const imageUrl = "https://storage.googleapis.com/gcp-project-us-central1-docs-agent-198925/images/2024-07-24T10-25-54.069Z_image.jpeg";
-  const imageAltText = t(`${templeInfo.nameEn} Aerial View`, `${templeInfo.nameTe} ఏరియల్ వ్యూ`);
+  const imageUrl = "https://upnow-prod.ff45e40d1a1c8f7e7de4e976d0c9e555.r2.cloudflarestorage.com/HrghCHiEyQMuFf6nsVL1GidVM6C2/7b704873-0a40-45cb-929e-7aee120d034e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=cdd12e35bbd220303957dc5603a4cc8e%2F20250612%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20250612T034548Z&X-Amz-Expires=43200&X-Amz-Signature=3b7c1ebffb8253fa4cce5aef8ddf7004418b2519b51dede39cdbda091a1313a2&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22Screenshot%202025-06-12%20090416.png%22";
+  const imageAltText = t(`${templeInfo.nameEn} Detail View`, `${templeInfo.nameTe} వివరాల వీక్షణ`);
 
   return (
     <div className="container py-12 md:py-16 animate-fade-in">
@@ -29,7 +29,7 @@ export default function AboutPage() {
           <img
             src={imageUrl}
             alt={imageAltText}
-            data-ai-hint="temple aerial"
+            data-ai-hint="temple detail"
             width={800}
             height={600}
             className="rounded-lg shadow-xl object-cover w-full h-auto max-w-[800px] max-h-[600px]"
