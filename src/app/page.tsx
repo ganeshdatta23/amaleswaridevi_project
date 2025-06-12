@@ -26,7 +26,7 @@ export default function HomePage() {
           objectFit="cover"
           quality={80}
           priority={true} // Added priority for LCP
-          className="absolute inset-0 z-0 opacity-40"
+          className="absolute inset-0 z-0" // Removed opacity-40
         />
         <div className="relative z-10 p-6 bg-background/70 backdrop-blur-sm rounded-lg shadow-xl max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-primary">
