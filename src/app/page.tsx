@@ -1,14 +1,14 @@
 
 'use client';
-import Image from 'next/image';
+// import Image from 'next/image'; // No longer using next/image for hero
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { newsItems, eventItems, templeInfo } from '@/lib/data';
 import type { NewsItem, EventItem } from '@/lib/types';
 import { useLanguage } from '@/contexts/language-context';
-import { CalendarDays, Newspaper, ArrowRight, Lightbulb } from 'lucide-react';
-import { EventIcon } from '@/components/icons/event-icon'; // Custom icon
+import { CalendarDays, Newspaper, ArrowRight, Lightbulb, Image as ImageIcon, HandCoins, Mail } from 'lucide-react'; // Added ImageIcon, HandCoins, Mail
+import { EventIcon } from '@/components/icons/event-icon'; 
 import {
   Accordion,
   AccordionContent,
@@ -25,8 +25,9 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative h-[60vh] md:h-[70vh] flex items-center justify-center text-center animate-fade-in">
         <img
-          src="https://storage.googleapis.com/gcp-project-us-central1-docs-agent-198925/images/2024-07-24T07-53-52.920Z_image.jpg"
+          src="https://placehold.co/1200x800.png" // Using placeholder
           alt={t(`${templeInfo.nameEn} majestic view`, `${templeInfo.nameTe} యొక్క సుందర దృశ్యం`)}
+          data-ai-hint="placeholder background" // Updated hint
           style={{
             position: 'absolute',
             top: 0,
@@ -34,7 +35,7 @@ export default function HomePage() {
             width: '100%',
             height: '100%',
             objectFit: 'cover',
-            zIndex: 0,
+            zIndex: 0, 
           }}
         />
         <div className="relative z-10 p-6 bg-background/70 backdrop-blur-sm rounded-lg shadow-xl max-w-3xl">
@@ -69,7 +70,7 @@ export default function HomePage() {
         </Card>
       </section>
 
-      {/* Call to Action / Quick Links Section - Removed AI Suggestions */}
+      {/* Call to Action / Quick Links Section */}
       <section className="container animate-fade-in" style={{ animationDelay: '0.4s' }}>
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
@@ -82,14 +83,14 @@ export default function HomePage() {
             <AccordionContent>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
                 {[
-                  { href: '/donate', labelEn: 'Donate Now', labelTe: 'ఇప్పుడే విరాళం ఇవ్వండి', icon: 'HandCoins' },
-                  { href: '/events', labelEn: 'View Events', labelTe: 'కార్యక్రమాలు చూడండి', icon: 'CalendarDays' },
-                  { href: '/gallery', labelEn: 'Temple Gallery', labelTe: 'ఆలయ చిత్రమాలిక', icon: 'Image' },
-                  { href: '/contact', labelEn: 'Contact Us', labelTe: 'మమ్మల్ని సంప్రదించండి', icon: 'Mail' },
+                  { href: '/donate', labelEn: 'Donate Now', labelTe: 'ఇప్పుడే విరాళం ఇవ్వండి', IconComponent: HandCoins },
+                  { href: '/events', labelEn: 'View Events', labelTe: 'కార్యక్రమాలు చూడండి', IconComponent: CalendarDays },
+                  { href: '/gallery', labelEn: 'Temple Gallery', labelTe: 'ఆలయ చిత్రమాలిక', IconComponent: ImageIcon },
+                  { href: '/contact', labelEn: 'Contact Us', labelTe: 'మమ్మల్ని సంప్రదించండి', IconComponent: Mail },
                 ].map((item) => (
                   <Button key={item.href} asChild variant="outline" className="w-full">
-                    <Link href={item.href}>
-                      {/* Icon placeholder, consider adding actual icons */}
+                    <Link href={item.href} className="flex items-center justify-center gap-2">
+                      <item.IconComponent className="w-4 h-4" />
                       {t(item.labelEn, item.labelTe)}
                     </Link>
                   </Button>
@@ -110,12 +111,11 @@ export default function HomePage() {
             <Card key={event.id} className="overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
               {event.imageUrl && (
                 <div className="relative h-48 w-full">
-                  <Image
+                  <img // Using img tag for events as well for consistency if next/image is problematic
                     src={event.imageUrl}
                     alt={t(event.titleEn, event.titleTe)}
                     data-ai-hint={event.imageHint || "temple event"}
-                    layout="fill"
-                    objectFit="cover"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 </div>
               )}
@@ -153,13 +153,12 @@ export default function HomePage() {
               <Card key={news.id} className="shadow-md hover:shadow-lg transition-shadow duration-300">
                 {news.imageUrl && (
                   <div className="relative h-40 w-full">
-                  <Image
+                  <img // Using img tag for news as well
                     src={news.imageUrl}
                     alt={t(news.titleEn, news.titleTe)}
                     data-ai-hint={news.imageHint || "temple news"}
-                    layout="fill"
-                    objectFit="cover"
-                    className="rounded-t-lg"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', borderTopLeftRadius: 'inherit', borderTopRightRadius: 'inherit' }}
+                    className="rounded-t-lg" // Keep for potential radius consistency
                   />
                   </div>
                 )}
@@ -185,3 +184,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+    
