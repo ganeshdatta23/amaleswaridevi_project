@@ -25,9 +25,9 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative h-[60vh] md:h-[70vh] flex items-center justify-center text-center animate-fade-in">
         <img
-          src="https://placehold.co/1200x800.png" // Using placeholder
+          src="https://images.unsplash.com/photo-1616074385287-67f6fb9e9eb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkdXJnYSUyMGRldml8ZW58MHx8fHwxNzQ5Njk0OTM4fDA&ixlib=rb-4.1.0&q=80&w=1080" 
           alt={t(`${templeInfo.nameEn} majestic view`, `${templeInfo.nameTe} యొక్క సుందర దృశ్యం`)}
-          data-ai-hint="placeholder background" // Updated hint
+          data-ai-hint="durga devi" 
           style={{
             position: 'absolute',
             top: 0,
