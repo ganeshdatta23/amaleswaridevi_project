@@ -43,7 +43,7 @@ export const eventItems: EventItem[] = [
     time: 'Annadanam around 1:00 PM on May 27th',
     descriptionEn: 'Grand annual celebrations of Sri Vijaya Amaleswari Devi, featuring special pujas, rituals, and a mass Annadanam (free food distribution) on Tuesday, May 27th, 2025, around 1:00 PM, organized by the Family Trust with community participation. All are invited.',
     descriptionTe: 'శ్రీ విజయ అమలేశ్వరి దేవి వార్షిక వేడుకలు. ప్రత్యేక పూజలు, ఆచారాలు, మరియు మే 27, 2025, మంగళవారం మధ్యాహ్నం 1:00 గంటలకు కుటుంబ ట్రస్ట్ మరియు సమాజ భాగస్వామ్యంతో భారీ అన్నదానం నిర్వహించబడుతుంది. అందరూ ఆహ్వానితులే.',
-    imageUrl: 'https://placehold.co/600x400.png',
+    imageUrl: 'https://images.unsplash.com/photo-1605764803170-c20b43be4d00?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxOHx8ZGl3YWxpfGVufDB8fHx8MTc0OTY5NTI3OHww&ixlib=rb-4.1.0&q=80&w=1080',
     imageHint: 'annual festival Annadanam',
   },
   {
