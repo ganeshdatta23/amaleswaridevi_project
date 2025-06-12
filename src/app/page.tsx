@@ -24,15 +24,18 @@ export default function HomePage() {
     <div className="space-y-12 md:space-y-16 lg:space-y-20">
       {/* Hero Section */}
       <section className="relative h-[60vh] md:h-[70vh] flex items-center justify-center text-center animate-fade-in">
-        <Image
+        <img
           src="https://storage.googleapis.com/gcp-project-us-central1-docs-agent-198925/images/2024-07-24T07-53-52.920Z_image.jpg"
           alt={t(`${templeInfo.nameEn} majestic view`, `${templeInfo.nameTe} యొక్క సుందర దృశ్యం`)}
-          data-ai-hint="goddess statue"
-          layout="fill"
-          objectFit="cover"
-          quality={80}
-          priority={true}
-          className="absolute inset-0 z-0"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            zIndex: 0,
+          }}
         />
         <div className="relative z-10 p-6 bg-background/70 backdrop-blur-sm rounded-lg shadow-xl max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold text-primary">
