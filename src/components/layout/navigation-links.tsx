@@ -12,7 +12,6 @@ export const navLinksData = [
   { href: '/pujas', label: 'Pujas', labelTe: 'పూజలు' },
   { href: '/events', label: 'Events', labelTe: 'కార్యక్రమాలు' },
   { href: '/gallery', label: 'Gallery', labelTe: 'చిత్రమాలిక' },
-  { href: '/map', label: 'Directions', labelTe: 'మార్గదర్శకాలు' },
   { href: '/trust', label: 'Trust', labelTe: 'ట్రస్ట్' },
   { href: '/social', label: 'Connect', labelTe: 'సోషల్ మీడియా' },
   { href: '/donate', label: 'Donate', labelTe: 'విరాళాలు', isFuture: true },

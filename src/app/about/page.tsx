@@ -2,12 +2,14 @@
 'use client';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { templeInfo } from '@/lib/data';
 import { useLanguage } from '@/contexts/language-context';
-import { ScrollText, Target, Clock } from 'lucide-react';
+import { ScrollText, Target, Clock, MapPin, ExternalLink } from 'lucide-react';
 
 export default function AboutPage() {
   const { t } = useLanguage();
+  const googleMapsLink = "https://g.co/kgs/5wKLsSh";
 
   return (
     <div className="container py-12 md:py-16 animate-fade-in">
@@ -20,7 +22,7 @@ export default function AboutPage() {
         </p>
       </header>
 
-      <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
+      <div className="grid md:grid-cols-2 gap-8 items-start mb-12">
         <div>
           <Image
             src="https://placehold.co/800x600.png"
@@ -65,6 +67,22 @@ export default function AboutPage() {
           </CardHeader>
           <CardContent className="text-foreground/80 leading-relaxed whitespace-pre-line">
             <p>{t(templeInfo.timingsEn, templeInfo.timingsTe)}</p>
+          </CardContent>
+        </Card>
+
+        <Card className="shadow-lg">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-2xl font-headline text-accent">
+              <MapPin className="w-6 h-6" /> {t('Our Location', 'మా చిరునామా')}
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-foreground/80 leading-relaxed">
+            <p>{t(templeInfo.contact.addressEn, templeInfo.contact.addressTe)}</p>
+            <Button asChild className="mt-4">
+              <a href={googleMapsLink} target="_blank" rel="noopener noreferrer">
+                {t('Get Directions', 'మార్గదర్శకాలు పొందండి')} <ExternalLink className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
           </CardContent>
         </Card>
       </div>

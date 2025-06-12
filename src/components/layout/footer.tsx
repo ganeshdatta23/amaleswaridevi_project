@@ -4,11 +4,13 @@ import Link from 'next/link';
 import { InstagramIcon, YoutubeIcon, WhatsAppIcon } from '@/components/icons/social-icons';
 import { useLanguage } from '@/contexts/language-context';
 import { templeInfo } from '@/lib/data';
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { MapPin, Phone, Mail, ExternalLink } from 'lucide-react'; // Added ExternalLink
+import { Button } from '@/components/ui/button'; // Added Button for styling Get Directions
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const { t } = useLanguage();
+  const googleMapsLink = "https://g.co/kgs/5wKLsSh";
 
   const socialLinks = [
     { name: 'WhatsApp', Icon: WhatsAppIcon, url: 'https://chat.whatsapp.com/D1QJOz92ONJ3ycJyVN0zPL', label: 'WhatsApp Group' },
@@ -35,17 +37,21 @@ export default function Footer() {
               <li><Link href="/pujas" className="text-footer-foreground/90 hover:text-accent transition-colors">{t('Pujas', 'పూజలు')}</Link></li>
               <li><Link href="/events" className="text-footer-foreground/90 hover:text-accent transition-colors">{t('Events', 'కార్యక్రమాలు')}</Link></li>
               <li><Link href="/gallery" className="text-footer-foreground/90 hover:text-accent transition-colors">{t('Gallery', 'చిత్రమాలిక')}</Link></li>
-              <li><Link href="/map" className="text-footer-foreground/90 hover:text-accent transition-colors">{t('Directions', 'మార్గదర్శకాలు')}</Link></li>
               <li><Link href="/trust" className="text-footer-foreground/90 hover:text-accent transition-colors">{t('Family Trust', 'కుటుంబ ట్రస్ట్')}</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="font-headline text-lg font-semibold text-accent mb-2">{t('Contact Info', 'సంప్రదింపు సమాచారం')}</h3>
             <address className="text-sm not-italic text-footer-foreground/80 space-y-2">
-              <p className="flex items-start">
+              <div className="flex items-start">
                 <MapPin className="w-4 h-4 mr-2 mt-0.5 shrink-0 text-accent/80" />
                 <span>{t(templeInfo.contact.addressEn, templeInfo.contact.addressTe)}</span>
-              </p>
+              </div>
+               <Button variant="link" size="sm" asChild className="px-0 text-footer-foreground/90 hover:text-accent transition-colors">
+                 <a href={googleMapsLink} target="_blank" rel="noopener noreferrer">
+                  {t('View on Map', 'మ్యాప్‌లో చూడండి')} <ExternalLink className="ml-1 h-3 w-3" />
+                </a>
+              </Button>
               <p className="flex items-center">
                 <Phone className="w-4 h-4 mr-2 shrink-0 text-accent/80" />
                 <a href={`tel:${templeInfo.contact.phone}`} className="text-footer-foreground/90 hover:text-accent transition-colors">{templeInfo.contact.phone}</a>
